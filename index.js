@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 import { program } from "commander";
 import chalk from "chalk";
 import inquirer from "inquirer";
@@ -11,82 +12,79 @@ console.log(
   chalk.yellow(figlet.textSync("My Node CLI", { horizontalLayout: "full" }))
 );
 
-program.action(() => {
-  inquirer
-    .prompt([
+async function mainMenu() {
+  let exit = false;
+
+  do {
+    const { choice } = await inquirer.prompt([
       {
         type: "list",
         name: "choice",
         message: "Choose an option:",
         choices: ["Option 1", "Option 2", "Option 3"],
       },
-    ])
-    .then((result) => {
-    //   if (result.choice === "Option 1") {
-    //     inquirer
-    //       .prompt([
-    //         {
-    //           type: "input",
-    //           name: "name",
-    //           message: "What's your name?",
-    //         },
-    //       ])
-    //       .then((answers) => {
-    //         const spinner = ora("Processing...").start();
-    //         setTimeout(() => {
-    //           spinner.succeed(chalk.green(`Hey there, ${answers.name}!`));
-    //         }, 2000);
-    //       });
-    //   } else {
-    //     const spinner = ora(`Doing ${result.choice}...`).start();
-    //     setTimeout(() => {
-    //       spinner.succeed(chalk.green("Done!"));
-    //     }, 3000);
-    //   }
-        switch (result.choice) {
-        case "Option 1":
-          inquirer
-            .prompt([
-              {
-                type: "input",
-                name: "name",
-                message: "What's your name?",
-              },
-            ])
-            .then((answers) => {
-              const spinner = ora("Processing...").start();
-              setTimeout(() => {
-                spinner.succeed(chalk.green(`Hey there, ${answers.name}!`));
-              }, 2000);
-            });
-          break;
+    ]);
 
-        case "Option 2":
-          inquirer
-            .prompt([
-              {
-                type: "input",
-                name: "lastname",
-                message: "What's your last name?",
-              },
-            ])
-            .then((answers) => {
-              const spinner = ora("Processing...").start();
-              setTimeout(() => {
-                spinner.succeed(chalk.hex("#ff69b4")(`Hello, Mr./Ms. ${answers.lastname}!`)); // rosa
-              }, 2000);
-            });
-          break;
+    switch (choice) {
+      case "Option 1":
+        const { name } = await inquirer.prompt([
+          {
+            type: "input",
+            name: "name",
+            message: "What's your name?",
+          },
+        ]);
+        const spinner1 = ora("Processing...").start();
+        setTimeout(() => {
+          spinner1.succeed(chalk.green(`Hey there, ${name}!`));
+        }, 2000);
+        break;
 
-        case "Option 3":
-        default:
-          const spinner = ora(`Doing ${result.choice}...`).start();
+      case "Option 2":
+        const { lastname } = await inquirer.prompt([
+          {
+            type: "input",
+            name: "lastname",
+            message: "What's your last name?",
+          },
+        ]);
+        const spinner2 = ora("Processing...").start();
+        setTimeout(() => {
+          spinner2.succeed(chalk.hex("#ff69b4")(`Hello, Mr./Ms. ${lastname}!`));
+        }, 2000);
+        break;
+
+      case "Option 3":
+        const { confirmExit } = await inquirer.prompt([
+          {
+            type: "confirm",
+            name: "confirmExit",
+            message: "Are you sure you want to exit?",
+            default: false,
+          },
+        ]);
+
+        if (confirmExit) {
+          const spinner3 = ora("Exiting...").start();
           setTimeout(() => {
-            spinner.succeed(chalk.blue("Done with Option 3!"));
-          }, 3000);
-          break;
+            spinner3.succeed(chalk.blue("Goodbye!"));
+          }, 1000);
+          exit = true;
+        } else {
+          console.log(chalk.yellow("Returning to menu..."));
         }
-    });
+        break;
+    }
+
+    if (!exit) {
+      await new Promise((resolve) => setTimeout(resolve, 2500));
+    }
+
+  } while (!exit);
+}
+
+program.action(() => {
+  mainMenu();
 });
 
 program.parse(process.argv);
