@@ -1,0 +1,22 @@
+{
+  "bin": {
+    "my-node-cli": "./index.js"
+  },
+  "name": "my-node-cli",
+  "version": "1.0.0",
+  "description": "node cli app",
+  "license": "ISC",
+  "author": "Julian Rodriguez",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0",
+    "figlet": "^1.8.2",
+    "inquirer": "^12.7.0",
+    "ora": "^8.2.0"
+  }
+}
