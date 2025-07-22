@@ -11,7 +11,7 @@ import { showTree } from "./utils/list.js"
 program.version("1.0.0").description("My Node CLI");
 
 console.log(
-  chalk.yellow(figlet.textSync("My Node CLI", { horizontalLayout: "full" }))
+  chalk.yellow(figlet.textSync("To-Do CLIst", { horizontalLayout: "full" }))
 );
 
 async function mainMenu() {

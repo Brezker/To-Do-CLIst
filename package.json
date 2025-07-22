@@ -1,8 +1,8 @@
 {
   "bin": {
-    "my-node-cli": "./index.js"
+    "todoclist": "./index.js"
   },
-  "name": "my-node-cli",
+  "name": "To-Do-CLIst",
   "version": "1.0.0",
   "description": "node cli app",
   "license": "ISC",
@@ -18,5 +18,6 @@
     "figlet": "^1.8.2",
     "inquirer": "^12.7.0",
     "ora": "^8.2.0"
-  }
+  },
+  "keywords": ["cli", "todo", "tasks", "node", "interactive", "task manager"]
 }
