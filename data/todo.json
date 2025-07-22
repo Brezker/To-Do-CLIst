@@ -1,0 +1,33 @@
+{
+  "todo": {
+    "editar video": {
+      "editar audio": {
+        "editar bajos": {
+          "editar sibilancia": {
+            "editar s fuertes": {
+              "hola": {}
+            }
+          },
+          "editar encajonamiento": {}
+        },
+        "editar medios": {
+          "editar voz nasal": {},
+          "editar graves": {}
+        }
+      },
+      "subir video": {
+        "miniatura": {
+          "buscar imagenes": {}
+        },
+        "buscar tags": {}
+      }
+    },
+    "crear guion": {
+      "investigar tema": {},
+      "escribir borrador": {
+        "introducción": {},
+        "Hell": {}
+      }
+    }
+  }
+}

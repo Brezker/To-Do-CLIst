@@ -5,6 +5,8 @@ import chalk from "chalk";
 import inquirer from "inquirer";
 import ora from "ora";
 import figlet from "figlet";
+import { mostrarTareasComoArbolInteractivo } from "./utils/todoist.js";
+import { showTree } from "./utils/list.js"
 
 program.version("1.0.0").description("My Node CLI");
 
@@ -21,40 +23,35 @@ async function mainMenu() {
         type: "list",
         name: "choice",
         message: "Choose an option:",
-        choices: ["Option 1", "Option 2", "Option 3"],
+        choices: ["📂 Gestionar tareas", "📋 Ver lista de tareas", "❌ Salir"],
       },
     ]);
 
     switch (choice) {
-      case "Option 1":
-        const { name } = await inquirer.prompt([
-          {
-            type: "input",
-            name: "name",
-            message: "What's your name?",
-          },
-        ]);
-        const spinner1 = ora("Processing...").start();
-        setTimeout(() => {
-          spinner1.succeed(chalk.green(`Hey there, ${name}!`));
-        }, 2000);
+      case "📂 Gestionar tareas":
+        const spinner1 = ora("Cargando tareas...").start();
+        await new Promise((resolve) => setTimeout(resolve, 800));
+        spinner1.succeed("Tareas cargadas");
+
+        try {
+          await mostrarTareasComoArbolInteractivo(); // 👈 espera correctamente
+        } catch (err) {
+          console.error(chalk.red("Error en la navegación:"), err);
+        }
         break;
 
-      case "Option 2":
-        const { lastname } = await inquirer.prompt([
-          {
-            type: "input",
-            name: "lastname",
-            message: "What's your last name?",
-          },
-        ]);
-        const spinner2 = ora("Processing...").start();
-        setTimeout(() => {
-          spinner2.succeed(chalk.hex("#ff69b4")(`Hello, Mr./Ms. ${lastname}!`));
-        }, 2000);
+      case "📋 Ver lista de tareas":
+        const spinner2 = ora("Cargando lista de tareas...").start();
+        await new Promise((resolve) => setTimeout(resolve, 700));
+        spinner2.succeed("Tareas cargadas");
+        try {
+          await showTree(); // 👈 espera correctamente
+        } catch (err) {
+          console.error(chalk.red("Error en la carga:"), err);
+        }
         break;
 
-      case "Option 3":
+      case "❌ Salir":
         const { confirmExit } = await inquirer.prompt([
           {
             type: "confirm",
@@ -77,7 +74,7 @@ async function mainMenu() {
     }
 
     if (!exit) {
-      await new Promise((resolve) => setTimeout(resolve, 2500));
+      await new Promise((resolve) => setTimeout(resolve, 900));
     }
 
   } while (!exit);
