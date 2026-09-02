@@ -3,19 +3,18 @@
   | |/ _ \ _____| | | |/ _ \      | |   | |    | |/ __| __|
   | | (_) |_____| |_| | (_) |     | |___| |___ | |\__ \ |_ 
   |_|\___/      |____/ \___/       \____|_____|___|___/\__|
-                                                           
-# To-Do-CLIst
-Aplicacion todo list desde terminal
-Todas las tareas son guardadas localmente en un archivo JSON
-Permitiendo exportar he importar facilmente
 
 <!-- Badges del proyecto -->  
 ![npm version](https://img.shields.io/badge/version-1.0.0-blue)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Brezker/To-Do-CLIst)
 
-# 📝 To-Do CLIst  
-  
-> Tu lista de tareas, directo desde la terminal.  
+# 📝 To-Do-CLIst  
+
+> Tu lista de tareas, directo desde la terminal.
+
+Aplicacion todo list desde terminal
+Todas las tareas son guardadas localmente en un archivo JSON
+Permitiendo exportar he importar facilmente
   
 ## Resumen  
   
@@ -33,10 +32,10 @@ Todo se maneja con flechas y "Enter", sin necesidad de escribir comandos complic
 ## 🚀 Instalación  
   
 1. Clona el repositorio:  
-   \`\`\`bash  
+   ```bash  
    git clone https://github.com/Brezker/To-Do-CLIst.git  
    cd To-Do-CLIst  
-   \`\`\`  
+   ```  
   
 2. Instala las dependencias:  
    \`\`\`bash  
