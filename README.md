@@ -9,3 +9,4 @@ Aplicacion todo list desde terminal
 Todas las tareas son guardadas localmente en un archivo JSON
 Permitiendo exportar he importar facilmente
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Brezker/To-Do-CLIst)
