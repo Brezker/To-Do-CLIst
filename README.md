@@ -1,22 +1,20 @@
-```
- _____           ____               ____ _     ___     _   
-|_   _|__       |  _ \  ___        / ___| |   |_ _|___| |_ 
-  | |/ _ \ _____| | | |/ _ \      | |   | |    | |/ __| __|
-  | | (_) |_____| |_| | (_) |     | |___| |___ | |\__ \ |_ 
-  |_|\___/      |____/ \___/       \____|_____|___|___/\__|
-```
+ _____           ____               ____ _     ___     _     
+|_   _|__       |  _ \  ___        / ___| |   |_ _|___| |_   
+  | |/ _ \ _____| | | |/ _ \      | |   | |    | |/ __| __|  
+  | | (_) |_____| |_| | (_) |     | |___| |___ | |\__ \ |_   
+  |_|\___/      |____/ \___/       \____|_____|___|___/\__|  
 
 <!-- Badges del proyecto -->  
 ![npm version](https://img.shields.io/badge/version-1.0.0-blue)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Brezker/To-Do-CLIst)
 
 # 📝 To-Do CLIst  
-
+  
 > Tu lista de tareas, directo desde la terminal.
-
-Aplicacion todo list desde terminal
-Todas las tareas son guardadas localmente en un archivo JSON
-Permitiendo exportar he importar facilmente
+  
+Aplicacion todo list desde terminal  
+Todas las tareas son guardadas localmente en un archivo JSON  
+Permitiendo exportar he importar facilmente  
   
 ## Resumen  
   
@@ -45,12 +43,12 @@ Todo se maneja con flechas y "Enter", sin necesidad de escribir comandos complic
    ```  
   
 3. Enlaza el comando globalmente (para poder usar `todoclist` desde cualquier carpeta):  
-   \\\bash  
+   ```bash  
    npm link  
-   \\\  
+   ```  
   
 4. ¡Listo! Ahora puedes correr:  
-   \\\bash  
+   ```bash  
    todoclist  
-   \\\
+   ```
    
