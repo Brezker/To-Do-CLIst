@@ -1,8 +1,10 @@
- _____           ____               ____ _     ___     _     
+```
+ _____           ____               ____ _     ___     _   
 |_   _|__       |  _ \  ___        / ___| |   |_ _|___| |_   
   | |/ _ \ _____| | | |/ _ \      | |   | |    | |/ __| __|  
   | | (_) |_____| |_| | (_) |     | |___| |___ | |\__ \ |_   
   |_|\___/      |____/ \___/       \____|_____|___|___/\__|  
+```
 
 <!-- Badges del proyecto -->  
 ![npm version](https://img.shields.io/badge/version-1.0.0-blue)
@@ -12,9 +14,7 @@
   
 > Tu lista de tareas, directo desde la terminal.
   
-Aplicacion todo list desde terminal  
 Todas las tareas son guardadas localmente en un archivo JSON  
-Permitiendo exportar he importar facilmente  
   
 ## Resumen  
   
