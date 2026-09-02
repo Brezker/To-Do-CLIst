@@ -10,7 +10,7 @@
 ![npm version](https://img.shields.io/badge/version-1.0.0-blue)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Brezker/To-Do-CLIst)
 
-# 📝 To-Do-CLIst  
+# 📝 To-Do CLIst  
 
 > Tu lista de tareas, directo desde la terminal.
 
