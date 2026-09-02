@@ -1,8 +1,10 @@
+```
  _____           ____               ____ _     ___     _   
 |_   _|__       |  _ \  ___        / ___| |   |_ _|___| |_ 
   | |/ _ \ _____| | | |/ _ \      | |   | |    | |/ __| __|
   | | (_) |_____| |_| | (_) |     | |___| |___ | |\__ \ |_ 
   |_|\___/      |____/ \___/       \____|_____|___|___/\__|
+```
 
 <!-- Badges del proyecto -->  
 ![npm version](https://img.shields.io/badge/version-1.0.0-blue)
@@ -38,17 +40,17 @@ Todo se maneja con flechas y "Enter", sin necesidad de escribir comandos complic
    ```  
   
 2. Instala las dependencias:  
-   \`\`\`bash  
+   ```bash  
    npm install  
-   \`\`\`  
+   ```  
   
 3. Enlaza el comando globalmente (para poder usar `todoclist` desde cualquier carpeta):  
-   \`\`\`bash  
+   \\\bash  
    npm link  
-   \`\`\`  
+   \\\  
   
 4. ¡Listo! Ahora puedes correr:  
-   \`\`\`bash  
+   \\\bash  
    todoclist  
-   \`\`\`
+   \\\
    
