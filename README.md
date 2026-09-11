@@ -44,7 +44,8 @@ Todo se maneja con flechas y "Enter", sin necesidad de escribir comandos complic
   
 3. Enlaza el comando globalmente (para poder usar `todoclist` desde cualquier carpeta):  
    ```bash  
-   npm link  
+   npm link
+   # sudo npm link // en Linux
    ```  
   
 4. ¡Listo! Ahora puedes correr:  
